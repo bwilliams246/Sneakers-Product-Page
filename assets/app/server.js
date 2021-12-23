@@ -2,6 +2,8 @@ const express = require('express')
 const myRoutes = require('./routes')
 const app = express()
 
+app.use(express.static('public'))
+
 app.use('/' , myRoutes)
 
 app.listen(3000 , error => {
